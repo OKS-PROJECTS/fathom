@@ -15,6 +15,7 @@
 }
 .fathom-panel-scroll { display: flex; flex-direction: column; flex-grow: 1; padding-top: 20px; }
 @media (min-width: 1024px) {
+  .fathom-frame { height: 100vh; overflow: hidden; }
   .fathom-panel { margin: 15px 15px 15px var(--app-sidebar-width); height: calc(100vh - 30px); min-height: 0; overflow: hidden; }
   .fathom-panel-scroll { overflow-y: auto; }
 }
