@@ -1,0 +1,178 @@
+.fathom-frame { min-height: 100vh; }
+.fathom-sidebar {
+  position: fixed; inset: 0 auto 0 0; z-index: 20; flex-direction: column;
+  width: var(--app-sidebar-width);
+  background: var(--app-menu-bg);
+}
+.fathom-mobilebar { height: var(--app-header-height); }
+.fathom-panel {
+  display: flex; flex-direction: column;
+  margin: 0 15px 15px;
+  min-height: calc(100vh - var(--app-header-height) - 15px);
+  background: var(--app-surface);
+  border: 1px solid var(--app-border-input);
+  border-radius: 12px;
+}
+.fathom-panel-scroll { display: flex; flex-direction: column; flex-grow: 1; padding-top: 20px; }
+@media (min-width: 1024px) {
+  .fathom-panel { margin: 15px 15px 15px var(--app-sidebar-width); height: calc(100vh - 30px); min-height: 0; overflow: hidden; }
+  .fathom-panel-scroll { overflow-y: auto; }
+}
+.fathom-container { width: 100%; margin-inline: auto; padding-inline: 16px; max-width: 1320px; }
+@media (min-width: 1024px) { .fathom-container { padding-inline: 24px; } }
+
+/* sidebar header + search */
+.fathom-ws {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 150px;
+  font-size: 14px; font-weight: 500; color: var(--app-fg-strong); background: transparent; border: 0; cursor: pointer;
+}
+.fathom-search {
+  position: relative; display: flex; align-items: center; gap: 8px; width: 100%; height: 34px; padding: 0 14px;
+  font-size: 13px; color: var(--app-fg-subtle); background: var(--app-surface);
+  border: 1px solid var(--app-border-input); border-radius: 6px; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); cursor: pointer;
+}
+.fathom-search:hover { color: var(--app-fg-strong); }
+/* nav (oks-ui Nav) — 36px rows, 14px/500 groups, 13px nested items, 24px indent */
+.fathom-nav { --oks-nav-active-indicator: transparent; --oks-nav-width: 100%; --oks-nav-gap: 2px; gap: 10px; width: 100%; }
+.fathom-nav .oksNavList { display: flex; flex-direction: column; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.fathom-nav .oksNavGroupList { margin: 0; padding: 2px 0 0 24px; border-inline-start: 0; }
+.fathom-nav .oksNavItem[data-has-children="true"] > .oksNavLink .oksNavCaret { width: 14px; height: 14px; opacity: 1; color: var(--app-fg-subtle); transform: rotate(90deg); }
+.fathom-nav .oksNavItem[data-expanded="true"] > .oksNavLink .oksNavCaret { transform: rotate(-90deg); }
+.fathom-nav .oksNavLink, .fathom-nav button[data-more] {
+  display: flex; align-items: center; gap: 8px; width: 100%; height: 36px; padding: 6px 8px;
+  border: 1px solid transparent; border-radius: 8px; background: transparent; text-align: start; cursor: pointer;
+  font-size: 13px; line-height: 20px; font-weight: 400; color: var(--app-menu-fg);
+}
+.fathom-nav > .oksNavList > .oksNavItem > .oksNavLink { font-size: 14px; font-weight: 500; color: var(--app-menu-active-fg); }
+.fathom-nav .oksNavIcon { display: inline-flex; opacity: .6; }
+.fathom-nav .oksNavLink:hover, .fathom-nav button[data-more]:hover { color: var(--app-menu-active-fg); }
+.fathom-nav .oksNavLink[aria-current="page"] {
+  background: var(--app-surface); border-color: var(--app-border); color: var(--app-menu-active-fg); font-weight: 500;
+}
+.fathom-nav button[data-more] { justify-content: space-between; color: var(--app-menu-fg-muted); }
+.fathom-nav .oksNavCaret { margin-inline-start: auto; }
+.fathom-nav li:has(> button[data-more]) > .oksNavGroupList { padding-left: 0; }
+.fathom-nav-sub { padding: 6px 8px 6px 28px; font-size: 13px; color: var(--app-menu-fg); }
+.fathom-side-acc { padding: 0; }
+.fathom-side-acc [role="region"] { padding-bottom: 4px; }
+
+/* cards: border-only surface, 12px radius, 56px header */
+.fathom-card {
+  --oks-card-padding-x: 0px; --oks-card-padding-y: 0px; --oks-card-gap: 0px;
+  display: flex; flex-direction: column; align-items: stretch; min-width: 0;
+  background: var(--app-surface); color: var(--app-fg);
+  border: 1px solid var(--app-border); border-radius: 12px; box-shadow: var(--app-card-shadow);
+}
+.fathom-card-head {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;
+  min-height: 56px; padding-inline: 20px; border-bottom: 1px solid var(--app-border);
+}
+.fathom-card-title { font-size: 16px; font-weight: 600; line-height: 1; letter-spacing: -0.025em; color: var(--app-fg-strong); }
+.fathom-card-foot { display: flex; min-height: 56px; padding-inline: 20px; border-top: 1px solid var(--app-border); }
+.fathom-muted { color: var(--app-fg-subtle); }
+.fathom-sec { color: var(--app-fg-muted); }
+
+/* legacy wrapper kept for pages not yet rebuilt */
+.fathom-content { width: 100%; margin-inline: auto; padding: 0 16px 28px; max-width: 1320px; }
+@media (min-width: 1024px) { .fathom-content { padding-inline: 24px; } }
+
+/* data table skin */
+.fathom-table table { border-collapse: separate; border-spacing: 0; font-size: 14px; width: 100%; }
+.fathom-table thead tr { background: color-mix(in srgb, var(--app-surface-2) 70%, transparent); }
+.fathom-table th { height: 40px; padding: 0 16px; font-weight: 400; font-size: 14px; color: var(--app-fg); text-align: start; }
+.fathom-table td { padding: 12px 16px; vertical-align: middle; border-bottom: 1px solid var(--app-border); color: var(--app-fg-strong); }
+.fathom-table th, .fathom-table td { border-inline-end: 1px solid var(--app-border); }
+.fathom-table th:last-child, .fathom-table td:last-child { border-inline-end: 0; }
+.fathom-table tbody tr:last-child td { border-bottom: 0; }
+
+.fathom-join-l .oksTextField, .fathom-join-l input { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.fathom-join-r { border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
+.fathom-pager .oksPagination { gap: 4px; }
+
+.oksAvatarGroup, .oksAvatarGroupStack { display: flex; line-height: 0; }
+
+.fathom-pager .oksPagination button, .fathom-pager .oksPagination a { min-width: 28px; width: 28px; height: 28px; padding: 0; font-size: 14px; }
+.fathom-select-compact { width: 47px; }
+.fathom-select-compact .oksSelectFieldTrigger { padding-inline: 10px 4px; font-size: 12px; }
+
+/* Spaces / Favorites rows: 36px, 14px regular, chevron right */
+.fathom-side-acc .oksAccordionTrigger { min-height: 36px; padding: 6px 8px; font-size: 14px; font-weight: 400; color: var(--app-menu-fg); border-radius: 8px; }
+.fathom-side-acc .oksAccordionHeadingText { font-size: 14px; font-weight: 400; }
+.fathom-side-acc .oksAccordionPanelInner { padding: 0; }
+
+/* profile hero + tabs */
+.fathom-hero {
+  background-position: center; background-size: cover; background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='360' height='312' viewBox='0 0 360 312'><g fill='none' stroke='%2371717a' stroke-opacity='.12' stroke-width='1.2'><path d='M90 20l52 30v60l-52 30-52-30V50z'/><path d='M244 78l52 30v60l-52 30-52-30v-60z'/><path d='M120 190l40 23v46l-40 23-40-23v-46z'/><path d='M300 250l30 17v35l-30 17-30-17v-35z'/></g></svg>");
+}
+:root[data-theme="dark"] .fathom-hero { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='360' height='312' viewBox='0 0 360 312'><g fill='none' stroke='%23ffffff' stroke-opacity='.08' stroke-width='1.2'><path d='M90 20l52 30v60l-52 30-52-30V50z'/><path d='M244 78l52 30v60l-52 30-52-30v-60z'/><path d='M120 190l40 23v46l-40 23-40-23v-46z'/><path d='M300 250l30 17v35l-30 17-30-17v-35z'/></g></svg>"); }
+.fathom-ring { box-shadow: 0 0 0 3px var(--ring, var(--oks-color-success-500)); border: 0; }
+.fathom-xscroll { overflow-x: auto; scrollbar-width: none; }
+.fathom-tab.oksButton {
+  --oks-button-height: auto; height: auto; padding: 14px 12px; border-radius: 0; background: transparent !important;
+  border: 0; border-bottom: 2px solid transparent; font-size: 14px; font-weight: 500; color: var(--app-fg-muted); box-shadow: none;
+}
+.fathom-tab.oksButton:hover { color: var(--app-fg-strong); }
+.fathom-tab.oksButton[data-active="true"] { color: var(--app-primary); border-bottom-color: var(--app-primary); }
+
+.fathom-footlink.oksButton {
+  --oks-button-height: 19px; height: 19px; padding: 0; font-size: 13px; font-weight: 500; line-height: 19px;
+  text-decoration: underline dashed; text-decoration-thickness: 1px; text-underline-offset: 4px; color: var(--app-primary);
+}
+
+.fathom-table-roomy td { padding: 16px; }
+.fathom-table-roomy thead tr { background: var(--app-bg); }
+.fathom-table-roomy th, .fathom-table-roomy td { border-inline-end: 0; }
+.fathom-table-roomy tbody tr:last-child td { border-bottom: 1px solid var(--app-border); }
+.fathom-tab.oksButton { line-height: 20px; }
+
+.fathom-card-flat { border: 0; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
+
+.fathom-round-toggle {
+  display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 9999px; cursor: pointer;
+  background: var(--oks-color-primary-50); border: 1px solid var(--oks-color-primary-300); color: var(--oks-palette-blue-600);
+}
+.fathom-round-toggle[data-on="true"] { background: var(--oks-palette-blue-500); border-color: var(--oks-palette-blue-500); color: #fff; }
+
+.fathom-react.oksButton[data-variant="bordered"] { border-color: var(--oks-color-primary-300) !important; color: var(--app-fg-strong) !important; }
+
+/* full-bleed profile modal */
+.fathom-modal-xl { width: min(1320px, calc(100vw - 40px)) !important; max-width: none !important; height: calc(100vh - 40px); max-height: none !important; padding: 0 !important; gap: 0; border: 1px solid var(--app-border); }
+.fathom-modal-body { padding: 0 !important; display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+.fathom-modal-cover {
+  border-radius: 8px 8px 0 0; margin-bottom: 28px;
+  background-image: linear-gradient(120deg, color-mix(in srgb, var(--oks-color-primary-500) 55%, var(--app-surface)), color-mix(in srgb, var(--oks-color-info-300) 40%, var(--app-surface)));
+}
+.fathom-modal-scroll { overflow-y: auto; min-height: 0; }
+
+.fathom-modal-xl > .oksModalHeader, .fathom-modal-xl > .oksDivider { display: none; }
+.fathom-modal-scroll { padding-left: 56px; padding-right: 44px; margin-right: 12px; }
+
+.fathom-card[class*="border-dashed"] { border-color: var(--oks-color-warning-200); }
+
+.fathom-year.oksButton { width: 50px; padding-inline: 10px; font-size: 12px; justify-content: flex-start; }
+
+.fathom-table-files thead tr { background: transparent; }
+.fathom-table-files th { height: 36px; font-size: 12px; color: var(--app-fg-subtle); border-inline-end: 0; }
+.fathom-table-files td { padding: 8px 16px; border-inline-end: 0; }
+.fathom-table-files td:first-child { padding-inline-start: 6px; }
+.fathom-table-files td .oksButton[data-icon-only="true"] { width: 32px; height: 32px; }
+
+.fathom-modal-pad { padding: 32px 40px 24px !important; }
+.fathom-modal-pad .fathom-modal-body { padding: 0 !important; }
+
+.fathom-faq .oksAccordionItem { border-bottom: 1px solid var(--app-border); }
+.fathom-faq .oksAccordionTrigger { padding: 16px 0; font-size: 14px; line-height: 24px; font-weight: 500; color: var(--app-fg-strong); }
+.fathom-faq .oksAccordionHeadingText { font-size: 14px; font-weight: 500; }
+
+/* Store pages: round 40px header icon buttons. */
+.fathom-store-icon { width: 40px; height: 40px; min-width: 40px; border-radius: 9999px; padding: 0; }
+
+/* Right-hand panels float 20px in from the viewport edge with rounded corners. */
+.fathom-float-drawer { top: 20px !important; bottom: 20px !important; right: 20px !important; height: auto !important; border-radius: 12px; max-width: calc(100vw - 40px); }
+
+/* Classic auth screens sit on a soft diagonal wash. */
+.fathom-auth-classic { background: radial-gradient(120% 80% at 80% 10%, var(--app-surface-2), transparent 60%), linear-gradient(160deg, var(--app-surface), var(--app-bg)); }
+
+/* Selects and date pickers never show a clear (x) button in this template. */
+.oksSelectFieldClear, .oksDatePickerFieldClearButton { display: none !important; }

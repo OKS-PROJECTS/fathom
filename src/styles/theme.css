@@ -1,0 +1,219 @@
+/* Fathom theme — design tokens. Layout-only Tailwind; every visual value comes from a variable. */
+:root {
+  --oks-palette-brand-50: var(--oks-palette-blue-50);
+  --oks-palette-brand-100: var(--oks-palette-blue-100);
+  --oks-palette-brand-200: var(--oks-palette-blue-200);
+  --oks-palette-brand-300: var(--oks-palette-blue-300);
+  --oks-palette-brand-400: var(--oks-palette-blue-400);
+  --oks-palette-brand-500: var(--oks-palette-blue-500);
+  --oks-palette-brand-600: var(--oks-palette-blue-600);
+  --oks-palette-brand-700: var(--oks-palette-blue-700);
+  --oks-palette-brand-800: var(--oks-palette-blue-800);
+  --oks-palette-brand-900: var(--oks-palette-blue-900);
+  --oks-palette-brand-950: var(--oks-palette-blue-950);
+
+  --oks-color-primary-50: var(--oks-palette-blue-50);
+  --oks-color-primary-100: var(--oks-palette-blue-100);
+  --oks-color-primary-200: var(--oks-palette-blue-200);
+  --oks-color-primary-300: var(--oks-palette-blue-300);
+  --oks-color-primary-400: var(--oks-palette-blue-400);
+  --oks-color-primary-500: var(--oks-palette-blue-500);
+  --oks-color-primary-600: var(--oks-palette-blue-600);
+  --oks-color-primary-700: var(--oks-palette-blue-700);
+  --oks-color-primary-800: var(--oks-palette-blue-800);
+  --oks-color-primary-900: var(--oks-palette-blue-900);
+  --oks-color-primary-950: var(--oks-palette-blue-950);
+  --oks-color-success-50: var(--oks-palette-green-50);
+  --oks-color-success-100: var(--oks-palette-green-100);
+  --oks-color-success-200: var(--oks-palette-green-200);
+  --oks-color-success-300: var(--oks-palette-green-300);
+  --oks-color-success-400: var(--oks-palette-green-400);
+  --oks-color-success-500: var(--oks-palette-green-500);
+  --oks-color-success-600: var(--oks-palette-green-600);
+  --oks-color-success-700: var(--oks-palette-green-700);
+  --oks-color-success-800: var(--oks-palette-green-800);
+  --oks-color-success-900: var(--oks-palette-green-900);
+  --oks-color-success-950: var(--oks-palette-green-950);
+  --oks-color-warning-50: var(--oks-palette-amber-50);
+  --oks-color-warning-100: var(--oks-palette-amber-100);
+  --oks-color-warning-200: var(--oks-palette-amber-200);
+  --oks-color-warning-300: var(--oks-palette-amber-300);
+  --oks-color-warning-400: var(--oks-palette-amber-400);
+  --oks-color-warning-500: var(--oks-palette-amber-500);
+  --oks-color-warning-600: var(--oks-palette-amber-600);
+  --oks-color-warning-700: var(--oks-palette-amber-700);
+  --oks-color-warning-800: var(--oks-palette-amber-800);
+  --oks-color-warning-900: var(--oks-palette-amber-900);
+  --oks-color-warning-950: var(--oks-palette-amber-950);
+  --oks-color-danger-50: var(--oks-palette-red-50);
+  --oks-color-danger-100: var(--oks-palette-red-100);
+  --oks-color-danger-200: var(--oks-palette-red-200);
+  --oks-color-danger-300: var(--oks-palette-red-300);
+  --oks-color-danger-400: var(--oks-palette-red-400);
+  --oks-color-danger-500: var(--oks-palette-red-500);
+  --oks-color-danger-600: var(--oks-palette-red-600);
+  --oks-color-danger-700: var(--oks-palette-red-700);
+  --oks-color-danger-800: var(--oks-palette-red-800);
+  --oks-color-danger-900: var(--oks-palette-red-900);
+  --oks-color-danger-950: var(--oks-palette-red-950);
+  --oks-color-info-50: var(--oks-palette-sky-50);
+  --oks-color-info-100: var(--oks-palette-sky-100);
+  --oks-color-info-200: var(--oks-palette-sky-200);
+  --oks-color-info-300: var(--oks-palette-sky-300);
+  --oks-color-info-400: var(--oks-palette-sky-400);
+  --oks-color-info-500: var(--oks-palette-sky-500);
+  --oks-color-info-600: var(--oks-palette-sky-600);
+  --oks-color-info-700: var(--oks-palette-sky-700);
+  --oks-color-info-800: var(--oks-palette-sky-800);
+  --oks-color-info-900: var(--oks-palette-sky-900);
+  --oks-color-info-950: var(--oks-palette-sky-950);
+  --oks-color-secondary-50: var(--oks-palette-zinc-50);
+  --oks-color-secondary-100: var(--oks-palette-zinc-100);
+  --oks-color-secondary-200: var(--oks-palette-zinc-200);
+  --oks-color-secondary-300: var(--oks-palette-zinc-300);
+  --oks-color-secondary-400: var(--oks-palette-zinc-400);
+  --oks-color-secondary-500: var(--oks-palette-zinc-500);
+  --oks-color-secondary-600: var(--oks-palette-zinc-600);
+  --oks-color-secondary-700: var(--oks-palette-zinc-700);
+  --oks-color-secondary-800: var(--oks-palette-zinc-800);
+  --oks-color-secondary-900: var(--oks-palette-zinc-900);
+  --oks-color-secondary-950: var(--oks-palette-zinc-950);
+
+  --oks-radius-lg: 0.5rem;
+  --oks-radius-xl: 0.75rem;
+
+  /* app layer */
+  --app-bg: #f4f4f5;
+  --app-surface: #ffffff;
+  --app-surface-2: #fafafa;
+  --app-border: oklch(94% 0.004 286.32);
+  --app-border-input: oklch(92% 0.004 286.32);
+  --app-border-strong: #d4d4d8;
+  --app-fg-strong: #09090b;
+  --app-fg: #27272a;
+  --app-fg-muted: #52525b;
+  --app-fg-subtle: #71717a;
+  --app-accent: var(--oks-color-primary-500);
+  --app-accent-soft: var(--oks-color-primary-50);
+  --app-ok: var(--oks-color-success-600);
+  --app-ok-soft: var(--oks-color-success-50);
+  --app-warn: var(--oks-color-warning-500);
+  --app-warn-soft: var(--oks-color-warning-50);
+  --app-bad: var(--oks-color-danger-600);
+  --app-bad-soft: var(--oks-color-danger-50);
+  --app-card-radius: 12px;
+  --app-card-border: 1px solid var(--app-border);
+  --app-card-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --app-menu-bg: transparent;
+  --app-menu-fg: #3f3f46;
+  --app-menu-fg-muted: #71717a;
+  --app-menu-active-bg: #ffffff;
+  --app-menu-active-fg: #09090b;
+  --app-menu-border: #e4e4e7;
+  --app-menu-heading: #71717a;
+  --app-header-bg: transparent;
+  --app-header-height: 60px;
+  --app-header-shadow: none;
+  --app-sidebar-width: 270px;
+
+  --app-primary: var(--app-accent);   --app-primary-soft: var(--app-accent-soft);
+  --app-success: var(--app-ok);       --app-success-soft: var(--app-ok-soft);
+  --app-warning: var(--app-warn);     --app-warning-soft: var(--app-warn-soft);
+  --app-danger: var(--app-bad);       --app-danger-soft: var(--app-bad-soft);
+
+  --oks-color-surface: #ffffff;
+  --oks-color-border: var(--app-border);
+  --oks-form-field-bg: #ffffff;
+  --oks-form-field-fg: #09090b;
+  --oks-form-field-border: #e4e4e7;
+  --oks-form-field-placeholder: #71717a;
+  --oks-form-field-label: #27272a;
+  --oks-form-field-muted: #52525b;
+}
+
+:root[data-theme="dark"] {
+  --app-bg: #09090b;
+  --app-surface: #09090b;
+  --app-surface-2: #18181b;
+  --app-border: #27272a;
+  --app-border-input: #27272a;
+  --app-border-strong: #3f3f46;
+  --app-fg-strong: #fafafa;
+  --app-fg: #e4e4e7;
+  --app-fg-muted: #a1a1aa;
+  --app-fg-subtle: #a1a1aa;
+  --app-ok: var(--oks-color-success-500);
+  --app-bad: var(--oks-color-danger-500);
+  --app-ok-soft: color-mix(in srgb, var(--oks-color-success-500) 16%, transparent);
+  --app-bad-soft: color-mix(in srgb, var(--oks-color-danger-500) 16%, transparent);
+  --app-warn-soft: color-mix(in srgb, var(--oks-color-warning-500) 16%, transparent);
+  --app-accent-soft: color-mix(in srgb, var(--oks-color-primary-500) 16%, transparent);
+  --app-menu-fg: #d4d4d8;
+  --app-menu-fg-muted: #a1a1aa;
+  --app-menu-active-bg: #18181b;
+  --app-menu-active-fg: #fafafa;
+  --app-menu-border: #27272a;
+  --app-menu-heading: #a1a1aa;
+
+  --oks-color-surface: #09090b;
+  --oks-color-border: var(--app-border);
+  --oks-form-field-bg: #09090b;
+  --oks-form-field-fg: #fafafa;
+  --oks-form-field-border: #3f3f46;
+  --oks-form-field-placeholder: #a1a1aa;
+  --oks-form-field-label: #e4e4e7;
+  --oks-form-field-muted: #a1a1aa;
+}
+
+/* global oks-ui patches (each logged in the private feedback doc) */
+.oksChart { border: none !important; background: transparent !important; padding: 0 !important; box-shadow: none !important; }
+.donut-no-center svg > g > text[text-anchor="middle"][dominant-baseline="middle"] { display: none; }
+.oksButton[data-variant="bordered"][data-color="default"],
+.oksButton[data-variant="ghost"][data-color="default"] {
+  --oks-button-tone: var(--app-fg-muted);
+  color: var(--app-fg) !important;
+}
+.oksButton[data-variant="bordered"][data-color="default"] { border-color: var(--app-border-strong) !important; }
+
+html, body { height: 100%; }
+body {
+  background: var(--app-bg);
+  color: var(--app-fg);
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Control sizing to the app's density: 28 / 34 / 40 px. Overrides oks-ui's size tokens. */
+.oksButton[data-size="xs"]  { --oks-button-height: 24px; --oks-button-font-size: 12px; --oks-button-padding-x: 8px;  --oks-button-padding-y: 0px; --oks-button-icon-size: 14px; }
+.oksButton[data-size="xs-sm"],
+.oksButton[data-size="sm"]  { --oks-button-height: 28px; --oks-button-font-size: 12px; --oks-button-padding-x: 10px; --oks-button-padding-y: 0px; --oks-button-icon-size: 16px; --oks-button-gap: 6px; }
+.oksButton[data-size="md"],
+.oksButton:not([data-size]) { --oks-button-height: 34px; --oks-button-font-size: 13px; --oks-button-padding-x: 12px; --oks-button-padding-y: 0px; --oks-button-icon-size: 16px; --oks-button-gap: 6px; }
+.oksButton[data-size="lg"]  { --oks-button-height: 40px; --oks-button-font-size: 14px; --oks-button-padding-x: 16px; --oks-button-padding-y: 0px; }
+.oksButton[data-icon-only="true"] { padding: 0; width: var(--oks-button-height); }
+.oksTextField[data-size="sm"] { --oks-text-field-height: 26px; --oks-text-field-font-size: 12px; }
+.oksTextField[data-size="md"] { --oks-text-field-height: 32px; --oks-text-field-font-size: 13px; }
+.oksSelectField[data-size="sm"] { --oks-select-height: 28px; --oks-select-font-size: 12px; }
+.oksSelectField[data-size="md"] { --oks-select-height: 34px; --oks-select-font-size: 13px; }
+.oksButton[data-variant="bordered"][data-color="default"] { --oks-button-bg: var(--app-surface); --oks-button-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); border-color: var(--app-border-input) !important; }
+
+/* Solid fills use the 500 stop (600 in dark) so the brand reads at the app's intended saturation. */
+.oksButton[data-variant="solid"][data-color="primary"] { --oks-button-bg: var(--oks-palette-blue-500); background-color: var(--oks-palette-blue-500); }
+.oksButton[data-variant="solid"][data-color="primary"]:hover { background-color: var(--oks-palette-blue-600); }
+.oksButton[data-variant="solid"][data-color="success"] { background-color: var(--oks-palette-green-500); }
+.oksButton[data-variant="solid"][data-color="danger"]  { background-color: var(--oks-palette-red-600); }
+.oksButton[data-variant="solid"][data-color="warning"] { background-color: var(--oks-palette-yellow-500); }
+:root[data-theme="dark"] .oksButton[data-variant="solid"][data-color="primary"] { background-color: var(--oks-palette-blue-600); }
+:root[data-theme="dark"] .oksButton[data-variant="solid"][data-color="primary"]:hover { background-color: var(--oks-palette-blue-700); }
+
+/* control density */
+.oksDatePickerField[data-size="md"] { --oks-date-picker-height: 34px; --oks-date-picker-font-size: 13px; }
+.oksCheckbox, .oksRadio, .oksRadioGroupField { --oks-checkbox-control-size: 20px; }
+
+.oksRadio, .oksRadioGroupField { --oks-radio-control-size: 20px; --oks-radio-dot-size: 10px; }
+
+/* Inverting "ink" button: near-black on light, near-white on dark. */
+:root { --app-ink-bg: #09090b; --app-ink-fg: #ffffff; }
+:root[data-theme="dark"] { --app-ink-bg: #fafafa; --app-ink-fg: #09090b; }
+.fathom-btn-ink { background: var(--app-ink-bg) !important; color: var(--app-ink-fg) !important; }
+.fathom-btn-ink:hover { filter: brightness(.92); }
