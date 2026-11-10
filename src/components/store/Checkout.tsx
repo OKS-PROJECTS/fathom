@@ -17,7 +17,7 @@ function Stepper({ current }: { current: string }) {
         const on = k === current;
         return (
           <div key={k} className="flex items-center gap-1.5">
-            <div className="relative flex h-[34px] items-center gap-1.5 rounded-full border px-3 text-[13px] font-medium leading-none" style={on ? { background: "color-mix(in srgb, var(--app-primary) 10%, transparent)", borderColor: "color-mix(in srgb, var(--app-primary) 10%, transparent)", color: "var(--app-primary)" } : { borderColor: "var(--app-border)", color: "var(--app-fg-strong)" }}><I size={16} aria-hidden />{t}</div>
+            <div className="relative flex h-[34px] items-center gap-1.5 rounded-full border px-3 text-[13px] font-medium leading-none" style={on ? { background: "color-mix(in srgb, var(--app-primary) 10%, transparent)", borderColor: "color-mix(in srgb, var(--app-primary) 10%, transparent)", color: "var(--oks-color-primary-700)" } : { borderColor: "var(--app-border)", color: "var(--app-fg-strong)" }}><I size={16} aria-hidden />{t}</div>
             {i < STEPS.length - 1 && <div className="hidden h-px w-12 border-t border-dashed lg:block" style={{ borderColor: "var(--app-border-input)" }} />}
           </div>
         );

@@ -18,7 +18,7 @@ export function ErrorScreen({ code }: { code: "404" | "500" }) {
       <span className="mt-6 inline-flex h-6 items-center rounded-md px-2 text-sm" style={{ color: "var(--app-fg-strong)" }}>{code} Error</span>
       <h3 className="mb-1 mt-3 text-2xl font-semibold" style={{ color: "var(--app-fg-strong)" }}>{is404 ? "This page has gone missing" : "Internal Server Error"}</h3>
       <p className="text-center text-sm" style={{ color: "var(--app-fg)" }}>
-        {is404 ? <>The requested page is missing. Check the URL or <Link href="/" style={{ color: "var(--app-primary)" }}>Return Home</Link>.</> : <>Server error occurred. Please try again later or <Link href="#" style={{ color: "var(--app-primary)" }}>Contact Us</Link> for assistance.</>}
+        {is404 ? <>The requested page is missing. Check the URL or <Link href="/" className="underline underline-offset-2" style={{ color: "var(--app-primary)" }}>Return Home</Link>.</> : <>Server error occurred. Please try again later or <Link href="#" className="underline underline-offset-2" style={{ color: "var(--app-primary)" }}>Contact Us</Link> for assistance.</>}
       </p>
       {!is404 && <div className="mt-6"><Button as={Link} href="/" color="primary">Back to Home</Button></div>}
     </main>

@@ -19,7 +19,7 @@ export function AuthShell({ variant, children }: { variant: "classic" | "branded
     );
   }
   return (
-    <div className="grid min-h-screen grow lg:grid-cols-2" style={{ background: "var(--app-surface)" }}>
+    <div className="grid min-h-screen grow grid-cols-1 lg:grid-cols-2" style={{ background: "var(--app-surface)" }}>
       <div className="order-2 flex items-center justify-center p-8 lg:order-1 lg:p-10"><div className="w-full max-w-[400px]">{children}</div></div>
       <BrandPanel />
     </div>

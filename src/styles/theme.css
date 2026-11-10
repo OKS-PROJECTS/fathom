@@ -197,12 +197,12 @@ body {
 .oksSelectField[data-size="md"] { --oks-select-height: 34px; --oks-select-font-size: 13px; }
 .oksButton[data-variant="bordered"][data-color="default"] { --oks-button-bg: var(--app-surface); --oks-button-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); border-color: var(--app-border-input) !important; }
 
-/* Solid fills under white labels use the 600 stop (700 for green) so the label reaches 4.5:1. */
+/* Solid fills under white labels use the 600 stop (700 for green) so the label reaches 4.5:1.
+   Warning keeps oks-ui's own fill: its label colour is set inline, so a lighter fill here would leave it white. */
 .oksButton[data-variant="solid"][data-color="primary"] { --oks-button-bg: var(--oks-palette-blue-600); background-color: var(--oks-palette-blue-600); }
 .oksButton[data-variant="solid"][data-color="primary"]:hover { background-color: var(--oks-palette-blue-700); }
 .oksButton[data-variant="solid"][data-color="success"] { background-color: var(--oks-palette-green-700); }
 .oksButton[data-variant="solid"][data-color="danger"]  { background-color: var(--oks-palette-red-600); }
-.oksButton[data-variant="solid"][data-color="warning"] { background-color: var(--oks-palette-yellow-500); }
 
 /* control density */
 .oksDatePickerField[data-size="md"] { --oks-date-picker-height: 34px; --oks-date-picker-font-size: 13px; }

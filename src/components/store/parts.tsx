@@ -48,7 +48,7 @@ export function RatingBadge({ value }: { value: number }) {
 }
 
 export function SaleTag({ children }: { children: ReactNode }) {
-  return <span className="inline-flex h-5 min-w-5 items-center rounded-sm px-[0.325rem] text-[0.6875rem] font-medium uppercase leading-3 text-white" style={{ background: "var(--oks-color-danger-500)" }}>{children}</span>;
+  return <span className="inline-flex h-5 min-w-5 items-center rounded-sm px-[0.325rem] text-[0.6875rem] font-medium uppercase leading-3" style={{ background: "var(--oks-color-danger-600)", color: "var(--app-ink-fg)" }}>{children}</span>;
 }
 
 export type Product = { id: number; name: string; rating: number; price: number; was?: number; sale?: string; hue: number };
