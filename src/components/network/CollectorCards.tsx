@@ -34,7 +34,7 @@ export function CollectorCardsPage() {
                   <div className="-mt-7.5 mb-px flex gap-1.5"><Link href="#" className="text-base font-medium leading-5" style={{ color: "var(--app-fg-strong)" }}>{p.name}</Link><BadgeCheck size={16} style={{ color: "var(--app-primary)" }} aria-label="Verified" /></div>
                   <div className="mb-7 flex flex-wrap gap-3.5">
                     <Link href="#" className="text-xs fathom-sec">@{p.handle}</Link>
-                    <div className="flex items-center text-xs font-medium" style={{ color: "var(--oks-color-success-500)" }}>{WALLETS[i]}<Copy size={16} className="ms-1 fathom-sec" aria-hidden /></div>
+                    <div className="flex items-center text-xs font-medium" style={{ color: "var(--oks-color-success-700)" }}>{WALLETS[i]}<Copy size={16} className="ms-1 fathom-sec" aria-hidden /></div>
                   </div>
                   <div className="mb-3 flex flex-wrap gap-2 lg:gap-5">
                     {[[STATS[i][0], "Sales"], [STATS[i][1], "Items"], [STATS[i][2], "Listed"]].map(([v, l]) => (

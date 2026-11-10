@@ -93,7 +93,7 @@
   --app-fg: #27272a;
   --app-fg-muted: #52525b;
   --app-fg-subtle: #71717a;
-  --app-accent: var(--oks-color-primary-500);
+  --app-accent: var(--oks-color-primary-600);
   --app-accent-soft: var(--oks-color-primary-50);
   --app-ok: var(--oks-color-success-600);
   --app-ok-soft: var(--oks-color-success-50);
@@ -197,14 +197,12 @@ body {
 .oksSelectField[data-size="md"] { --oks-select-height: 34px; --oks-select-font-size: 13px; }
 .oksButton[data-variant="bordered"][data-color="default"] { --oks-button-bg: var(--app-surface); --oks-button-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); border-color: var(--app-border-input) !important; }
 
-/* Solid fills use the 500 stop (600 in dark) so the brand reads at the app's intended saturation. */
-.oksButton[data-variant="solid"][data-color="primary"] { --oks-button-bg: var(--oks-palette-blue-500); background-color: var(--oks-palette-blue-500); }
-.oksButton[data-variant="solid"][data-color="primary"]:hover { background-color: var(--oks-palette-blue-600); }
-.oksButton[data-variant="solid"][data-color="success"] { background-color: var(--oks-palette-green-500); }
+/* Solid fills under white labels use the 600 stop (700 for green) so the label reaches 4.5:1. */
+.oksButton[data-variant="solid"][data-color="primary"] { --oks-button-bg: var(--oks-palette-blue-600); background-color: var(--oks-palette-blue-600); }
+.oksButton[data-variant="solid"][data-color="primary"]:hover { background-color: var(--oks-palette-blue-700); }
+.oksButton[data-variant="solid"][data-color="success"] { background-color: var(--oks-palette-green-700); }
 .oksButton[data-variant="solid"][data-color="danger"]  { background-color: var(--oks-palette-red-600); }
 .oksButton[data-variant="solid"][data-color="warning"] { background-color: var(--oks-palette-yellow-500); }
-:root[data-theme="dark"] .oksButton[data-variant="solid"][data-color="primary"] { background-color: var(--oks-palette-blue-600); }
-:root[data-theme="dark"] .oksButton[data-variant="solid"][data-color="primary"]:hover { background-color: var(--oks-palette-blue-700); }
 
 /* control density */
 .oksDatePickerField[data-size="md"] { --oks-date-picker-height: 34px; --oks-date-picker-font-size: 13px; }

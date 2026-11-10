@@ -16,7 +16,7 @@ import { HelpCards } from "@/components/account/HelpCards";
 
 const Flag = ({ name, size = 16 }: { name: string; size?: number }) => {
   const hue = [...name].reduce((a, c) => a + c.charCodeAt(0), 0) % 360;
-  return <span className="inline-flex shrink-0 items-center justify-center rounded-full font-semibold text-white" style={{ width: size, height: size, fontSize: 7, background: `oklch(60% .14 ${hue})` }} aria-hidden>{name.slice(0, 2).toUpperCase()}</span>;
+  return <span className="inline-flex shrink-0 items-center justify-center rounded-full font-semibold text-white" style={{ width: size, height: size, fontSize: 7, background: `oklch(50% .14 ${hue})` }} aria-hidden>{name.slice(0, 2).toUpperCase()}</span>;
 };
 const strong = { color: "var(--app-fg-strong)" } as const;
 const Person = ({ name, sub, seed, size = 28 }: { name: string; sub?: ReactNode; seed: number; size?: number }) => (

@@ -28,7 +28,7 @@ const ROWS: M[] = Array.from({ length: 33 }, (_, i) => ({ id: i, ...BASE[i % BAS
 const SC = { Pending: "warning", Declined: "danger", Accepted: "success" } as const;
 const Flag = ({ name }: { name: string }) => {
   const hue = [...name].reduce((a, c) => a + c.charCodeAt(0), 0) % 360;
-  return <span className="inline-flex size-4 shrink-0 items-center justify-center rounded-full text-[7px] font-semibold text-white" style={{ background: `oklch(60% .14 ${hue})` }} aria-hidden>{name.slice(0, 2).toUpperCase()}</span>;
+  return <span className="inline-flex size-4 shrink-0 items-center justify-center rounded-full text-[7px] font-semibold text-white" style={{ background: `oklch(50% .14 ${hue})` }} aria-hidden>{name.slice(0, 2).toUpperCase()}</span>;
 };
 const columns: TableColumn<M>[] = [
   { key: "name", header: "Member", width: 250, sortable: true, sortValue: (r) => r.name, cellClassName: "text-nowrap", render: (r) => <div className="flex gap-2.5"><Avatar name={r.name} src={avatarUrl(r.id + 10)} size={36} /><div className="flex flex-col gap-0.5"><Link href="#" className="text-sm font-medium leading-none" style={{ color: "var(--app-fg-strong)" }}>{r.name}</Link><span className="text-sm font-normal fathom-sec">{r.tasks} tasks</span></div></div> },

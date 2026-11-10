@@ -1,10 +1,20 @@
 # Changelog
 
-> Requires oks-ui ^1.4.1
+> Requires oks-ui ^1.6.0
 
 ## [Unreleased]
 
+## [1.0.1] — 2026-11-10
+
+### Changed
+
+- Updated to oks-ui `^1.6.0` (from `^1.4.1`).
+
 ### Fixed
+- Text contrast meets WCAG AA (4.5:1) in light and dark. Solid primary buttons are blue 600 (were 500, 3.7:1 under
+  white labels), solid success buttons green 700, and links and accents in light mode use primary 600. Initials
+  circles are drawn at 50% lightness (were 60 to 62%, down to 3.2:1 for some hues), the "+N" member count is
+  amber 700 with a label that flips with the theme, and wallet addresses use success 700.
 - Desktop pages no longer show a second scrollbar. The panel's bottom margin made the page about 15 px taller than the window; the frame is now the window's height.
 
 ### Security
