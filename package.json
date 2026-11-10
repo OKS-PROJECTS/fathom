@@ -1,6 +1,6 @@
 {
   "name": "fathom",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fathom — an admin dashboard template built entirely with oks-ui.",
   "private": true,
   "license": "MIT",
@@ -20,7 +20,7 @@
     "date-fns": "^4.4.0",
     "lucide-react": "^1.55.0",
     "next": "16.4.6",
-    "oks-ui": "^1.4.1",
+    "oks-ui": "^1.6.0",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
