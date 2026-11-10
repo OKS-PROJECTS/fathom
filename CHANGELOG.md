@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+### Fixed
+- Desktop pages no longer show a second scrollbar. The panel's bottom margin made the page about 15 px taller than the window; the frame is now the window's height.
+
+### Security
+- Next.js 16.4.0 to 16.4.6, for three advisories in 16.0.0 to 16.4.0 (GHSA-2464-fhr4-w9xw, GHSA-673q-mjm6-r5xr, GHSA-p3m5-59mp-jv5r). The GitHub Pages demo is a static export with no server, so it was not exposed; running the template with `next start` was.
+
 ## [1.0.0] — 2026-10-13
 
 ### Added
