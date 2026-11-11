@@ -30,7 +30,7 @@ export function SearchResultsPage({ title, view, details = false, wishlist = fal
           <Button color="primary" startContent={<Funnel size={16} />} onPress={() => setOpen(true)}>Filter</Button>
         </div>
         <div className="mt-3 flex flex-wrap justify-between gap-5">
-          <h3 className="text-sm font-medium" style={{ color: "var(--app-fg-strong)" }}>1 - 12 over 280 results for <span style={{ color: "var(--oks-color-danger-500)" }}>Stridewell</span></h3>
+          <h3 className="text-sm font-medium" style={{ color: "var(--app-fg-strong)" }}>1 - 12 over 280 results for <span style={{ color: "var(--oks-color-danger-700)" }}>Stridewell</span></h3>
           <div className="flex gap-2.5">
             <div className="w-[195px]"><SelectField aria-label="Sort" defaultValue="hl" options={[{ label: "Price: High to Low", value: "hl" }, { label: "Price: Low to High", value: "lh" }, { label: "Rating", value: "r" }]} /></div>
             <div className="grid grid-cols-4 gap-1">{["Today", "Week", "Month", "All"].map((p) => <Button key={p} variant="bordered" onPress={() => setPeriod(p)} style={period === p ? { background: "var(--app-surface-2)" } : undefined}>{p}</Button>)}</div>

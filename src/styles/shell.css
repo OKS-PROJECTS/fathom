@@ -15,6 +15,7 @@
 }
 .fathom-panel-scroll { display: flex; flex-direction: column; flex-grow: 1; padding-top: 20px; }
 @media (min-width: 1024px) {
+  .fathom-frame { height: 100vh; overflow: hidden; }
   .fathom-panel { margin: 15px 15px 15px var(--app-sidebar-width); height: calc(100vh - 30px); min-height: 0; overflow: hidden; }
   .fathom-panel-scroll { overflow-y: auto; }
 }
@@ -107,7 +108,7 @@
 }
 :root[data-theme="dark"] .fathom-hero { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='360' height='312' viewBox='0 0 360 312'><g fill='none' stroke='%23ffffff' stroke-opacity='.08' stroke-width='1.2'><path d='M90 20l52 30v60l-52 30-52-30V50z'/><path d='M244 78l52 30v60l-52 30-52-30v-60z'/><path d='M120 190l40 23v46l-40 23-40-23v-46z'/><path d='M300 250l30 17v35l-30 17-30-17v-35z'/></g></svg>"); }
 .fathom-ring { box-shadow: 0 0 0 3px var(--ring, var(--oks-color-success-500)); border: 0; }
-.fathom-xscroll { overflow-x: auto; scrollbar-width: none; }
+.fathom-xscroll { position: relative; overflow-x: auto; scrollbar-width: none; }
 .fathom-tab.oksButton {
   --oks-button-height: auto; height: auto; padding: 14px 12px; border-radius: 0; background: transparent !important;
   border: 0; border-bottom: 2px solid transparent; font-size: 14px; font-weight: 500; color: var(--app-fg-muted); box-shadow: none;

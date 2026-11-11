@@ -1,8 +1,29 @@
 # Changelog
 
-> Requires oks-ui ^1.4.1
+> Requires oks-ui ^1.6.0
 
 ## [Unreleased]
+
+## [1.0.1] — 2026-11-10
+
+### Changed
+
+- Updated to oks-ui `^1.6.0` (from `^1.4.1`).
+
+### Fixed
+- Text contrast meets WCAG AA (4.5:1) in light and dark. Solid primary buttons are blue 600 (were 500, 3.7:1 under
+  white labels), solid success buttons green 700, and links and accents in light mode use primary 600. Initials
+  circles are drawn at 50% lightness (were 60 to 62%, down to 3.2:1 for some hues), the "+N" member count is
+  amber 700 with a label that flips with the theme, and wallet addresses use success 700. In the store, sale and
+  status badges are danger 600 with a label that flips with the theme, and the search term is danger 700; the
+  active checkout step and the activity dates are 700 shades; solid warning buttons keep oks-ui's own fill.
+- Links in the text of the 404 and 500 pages are underlined, so they are not told apart by colour alone.
+- No sideways scrolling at 390 px on Billing plans (the table's screen-reader labels escaped its scroll area and
+  widened the page to 653 px) or on the branded two-factor page (the one-column grid was 400 px wide).
+- Desktop pages no longer show a second scrollbar. The panel's bottom margin made the page about 15 px taller than the window; the frame is now the window's height.
+
+### Security
+- Next.js 16.4.0 to 16.4.6, for three advisories in 16.0.0 to 16.4.0 (GHSA-2464-fhr4-w9xw, GHSA-673q-mjm6-r5xr, GHSA-p3m5-59mp-jv5r). The GitHub Pages demo is a static export with no server, so it was not exposed; running the template with `next start` was.
 
 ## [1.0.0] — 2026-10-13
 

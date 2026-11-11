@@ -26,13 +26,13 @@ const items = (): ActivityItem[] => [
             <div className="flex flex-col gap-5 md:flex-row md:items-center">
               <div className="flex gap-5">
                 <div className="max-h-20 rounded-lg border" style={{ borderColor: "var(--oks-color-warning-200)" }}>
-                  <div className="flex rounded-t-lg border-b" style={{ borderColor: "var(--oks-color-warning-200)", background: "var(--oks-color-warning-50)" }}><span className="p-2 text-sm font-medium" style={{ color: "var(--oks-color-warning-500)" }}>Apr</span></div>
+                  <div className="flex rounded-t-lg border-b" style={{ borderColor: "var(--oks-color-warning-200)", background: "var(--oks-color-warning-50)" }}><span className="p-2 text-sm font-medium" style={{ color: "var(--oks-color-warning-700)" }}>Apr</span></div>
                   <div className="flex size-12 items-center justify-center"><span className="text-xl font-medium tracking-tight" style={{ color: "var(--app-fg-strong)" }}>02</span></div>
                 </div>
                 <ArtImage seed={14} width={120} height={80} className="rounded-lg" />
               </div>
               <div className="flex flex-col items-start gap-2">
-                <Link href="/public-profile/activity" className="mb-px text-xs font-medium leading-[14px]" style={{ color: "var(--oks-color-warning-500)" }}>Field Photography Immersion</Link>
+                <Link href="/public-profile/activity" className="mb-px text-xs font-medium leading-[14px]" style={{ color: "var(--oks-color-warning-700)" }}>Field Photography Immersion</Link>
                 <Link href="/public-profile/activity" className="text-base font-medium leading-4" style={{ color: "var(--app-fg-strong)" }}>Field Photography Immersion</Link>
                 <p className="text-xs leading-[22px]" style={{ color: "var(--app-fg)" }}>Sharpen your landscape photography in a hands-on workshop guided by working photographers.</p>
               </div>

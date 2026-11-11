@@ -1,7 +1,7 @@
 {
   "name": "fathom",
-  "version": "1.0.0",
-  "description": "Fathom \u2014 an admin dashboard template built entirely with oks-ui.",
+  "version": "1.0.1",
+  "description": "Fathom — an admin dashboard template built entirely with oks-ui.",
   "private": true,
   "license": "MIT",
   "homepage": "https://oks-projects.github.io/fathom/",
@@ -19,8 +19,8 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.4.0",
     "lucide-react": "^1.55.0",
-    "next": "16.4.0",
-    "oks-ui": "^1.4.1",
+    "next": "16.4.6",
+    "oks-ui": "^1.6.0",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },
@@ -31,7 +31,7 @@
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.4.0",
+    "eslint-config-next": "16.4.6",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

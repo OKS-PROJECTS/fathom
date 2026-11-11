@@ -24,7 +24,7 @@ const APPS: [string, string, number, boolean][] = [
 ];
 
 function Mark({ name, hue }: { name: string; hue: number }) {
-  return <div className="flex size-11 items-center justify-center rounded-xl text-base font-semibold text-white" style={{ background: `oklch(62% .16 ${hue})` }} aria-hidden>{name.slice(0, 1)}</div>;
+  return <div className="flex size-11 items-center justify-center rounded-xl text-base font-semibold text-white" style={{ background: `oklch(50% .16 ${hue})` }} aria-hidden>{name.slice(0, 1)}</div>;
 }
 function App({ name, text, hue, on }: { name: string; text: string; hue: number; on: boolean }) {
   const [v, setV] = useState(on);

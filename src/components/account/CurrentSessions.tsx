@@ -31,7 +31,7 @@ const FAQ = ["How is the price of each plan worked out?", "Which payment methods
 
 const Flag = ({ name }: { name: string }) => {
   const hue = [...name].reduce((a, c) => a + c.charCodeAt(0), 0) % 360;
-  return <span className="inline-flex size-4 shrink-0 items-center justify-center rounded-full text-[7px] font-semibold text-white" style={{ background: `oklch(60% .14 ${hue})` }} aria-hidden>{name.slice(0, 2).toUpperCase()}</span>;
+  return <span className="inline-flex size-4 shrink-0 items-center justify-center rounded-full text-[7px] font-semibold text-white" style={{ background: `oklch(50% .14 ${hue})` }} aria-hidden>{name.slice(0, 2).toUpperCase()}</span>;
 };
 const columns: TableColumn<S>[] = [
   { key: "person", header: "Person", sortable: true, sortValue: (r) => r.person, render: (r) => <div className="flex items-center gap-2.5"><Avatar name={r.person} src={avatarUrl(r.id + 3)} size={36} /><Link href="#" className="font-semibold leading-none" style={{ color: "var(--app-fg-strong)" }}>{r.person}</Link></div> },
